@@ -15,11 +15,14 @@
 <script>
 function ww()
 {
-x1=document.getElementById('a').value;
-x2=document.getElementById('b').value;
-x3=document.getElementById('c').value;
-( y=x1+x2+x3 );
-document.getElementById('d').value=y;
+<script>
+var a, s=0;
+for (i=1; i<4; ++i) {
+a=prompt("Введи число №"+i, "");
+s=s+Number(a);
+}
+{alert("Среднее арифметическое введенных вами чисел равно "+s/3);}
+</script>
 }
 </script>
 x1=<input type="text" id='a' size='4'><br>
