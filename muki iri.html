@@ -6,9 +6,10 @@
 <script>
 function ww()
 {
+"use strict";
 x1=document.getElementById('a').value;
-x2=document.getElementByid('b').value;
-x3=document.getElementByid('c').value;
+x2=document.getElementById('b').value;
+x3=document.getElementById('c').value;
 y=(x1+x2+x3)/3;
 document.getElementById('d').value=y;
 }
@@ -17,8 +18,11 @@ x1=<input type="text" id='a' size='4'><br>
 x2=<input type="text" id='b' size='4'><br>
 x3=<input type="text" id='c' size='4'><br>
 <input type="button" value="Нажми" 
-onclick="ww()"><br>
+onclick="try{ ww() } catch(e) {alert(e)}"><br>
 y=<input type="text" id='d' size='4'><br>
+</body>
+</html>
+
 </body>
 </html>
 <body>
