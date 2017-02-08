@@ -11,7 +11,35 @@ html {
 	font-weight: 300;
 	color: #FFF;
 }
-
+type Mas=array[1..100] of integer;
+//Рекурсивная функция
+function Scal(k:byte;x,y:Mas):integer;
+begin
+if k=0 then Scal:=0 else Scal:=x[k]*y[k]+Scal(k-1,x,y)
+end;
+//Основная программа
+var a,b:Mas;
+    i,n,m:Byte;
+begin
+randomize;
+write('Количество элементов массивов n=');
+readln(n);
+writeln('Массив А');
+for i:=1 to n do
+  begin
+    a[i]:=Random(20);
+    write(a[i],' ');
+  end;
+writeln;
+writeln('Массив B');
+for i:=1 to n do
+  begin
+    b[i]:=Random(20);
+    write(b[i],' ');
+  end;
+writeln;
+write('Скалярное произведение=',Scal(n,a,b));
+end.
 body, html {
 	height: 100%;
 	margin: 0;
