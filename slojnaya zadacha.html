@@ -1,28 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<<style>
-p0 {font-size: 4em; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; color: #ddcca3;}
-</style>
-<p0 id="p0">Муки ИРЫ</p0>
-
-
-<script>
-function er1() {
-     document.getElementById('p0').innerHTML =" "; 
-var e =9;  
-var A=[];
-for (;e>=0;){
-l='i'+e;
-A[e]= document.getElementById(l).value;
-e--;}
-    for (var i = 0; i < 9; i++)
-     { for (var j = 0; j < 9-i; j++)
-        { if (A[j+1] < A[j])
-           { var t = A[j+1]; A[j+1] = A[j]; A[j] = t; }
-        }
-     }                     
-   document.getElementById('p0').innerHTML = document.getElementById('p0').innerHTML +" "+A[0]; 
+#include <stdio.h>
+#include <math.h>
+void main( )
+{
+      int i = 169, j = 168;
+      printf(
+            <sqrt(%d)=%d, sqrt(%d)=%d>,
+            i, (int)sqrt(i),
+            j, (int)sqrt(j)
+      );
 }
- 
-</script>
 <html/>
