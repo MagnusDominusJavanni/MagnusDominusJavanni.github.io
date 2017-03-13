@@ -1,29 +1,6 @@
 <!DOCTYPE html>
 <html>
- public class Fibb
-{
-    public static int Main(String[] args)
-    {
-        string[] tokens = ((new StreamReader("input.txt")).ReadLine()).Split(' ');
-        int n = int.Parse(tokens[0]),
-            k = int.Parse(tokens[1]),
-            l = int.Parse(tokens[2]);
-        int pow = 1,
-            a = 1,
-            b = 1;
-        for (int i = 1; i <= l; i++) pow *= k;
-        for (int i = 3; i <= n; i++)
-        {
-            int tmp = (a + b) % pow;
-            a = b;
-            b = tmp;
-        }
-        StreamWriter fout = new StreamWriter("output.txt");
-        fout.WriteLine(b);
-        fout.Close();
-        return 0;
-    }
-}
+
 </script>
  <p>
     <button type="button" class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
@@ -36,6 +13,10 @@
       Open only one at a time
     </label>
   </div>
+function func(n) {
+  return n <= 1 ? n : func(n - 1) + func(n - 2);
+}
+alert(func(10)); // 55
   <uib-accordion close-others="oneAtATime">
     <div uib-accordion-group class="panel-default" heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
       This content is straight in the template.
