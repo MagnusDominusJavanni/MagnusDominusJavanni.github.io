@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html>
+ import java.math.BigInteger;
+public class FibonacciNumber {
+ static BigInteger getByLoopWithBigInteger(int n) {
+ BigInteger a = new BigInteger("1");
+ BigInteger b = new BigInteger("1");
+for (int i = 0; i < n; i++) {
+BigInteger saveA = a;
+a = b;
+ b = saveA.add(a);
+}
+return a;
+}
+public static void main(String[] args) {
+System.out.println("Число Фибоначчи: "
+        +FibonacciNumber.getByLoopWithBigInteger(50000));
+}
+}
 </script>
  <p>
     <button type="button" class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
