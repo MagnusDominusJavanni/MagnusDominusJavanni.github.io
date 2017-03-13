@@ -1,26 +1,7 @@
 <!DOCTYPE html>
 <html>
-def fib(n):
-    if n==1 or n==2:
-        return 1
-    return fib(n-1) + fib(n-2)
-<div ng-controller="AccordionDemoCtrl">
-  <script type="text/ng-template" id="group-template.html">
-    <div class="panel-heading">
-      <h4 class="panel-title" style="color:#fa39c3">
-        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
-          <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
-            {{heading}}
-          </span>
-        </a>
-      </h4>
-    </div>
-    <div class="panel-collapse collapse" uib-collapse="!isOpen">
-      <div class="panel-body" style="text-align: right" ng-transclude></div>
-    </div>
-  </script>
-
-  <p>
+</script>
+ <p>
     <button type="button" class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
     <button type="button" class="btn btn-default btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
   </p>
@@ -45,6 +26,24 @@ def fib(n):
     </div>
     <div uib-accordion-group class="panel-default" heading="Custom template" template-url="group-template.html">
       Hello
+    </div>
+      def fib(n):
+    if n==1 or n==2:
+        return 1
+    return fib(n-1) + fib(n-2)
+<div ng-controller="AccordionDemoCtrl">
+  <script type="text/ng-template" id="group-template.html">
+    <div class="panel-heading">
+      <h4 class="panel-title" style="color:#fa39c3">
+        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+          <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+            {{heading}}
+          </span>
+        </a>
+      </h4>
+    </div>
+    <div class="panel-collapse collapse" uib-collapse="!isOpen">
+      <div class="panel-body" style="text-align: right" ng-transclude></div>
     </div>
     <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" template-url="group-template.html">
       <uib-accordion-heading>
