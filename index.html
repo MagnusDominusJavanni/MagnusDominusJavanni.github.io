@@ -109,6 +109,61 @@ eto index,dobro pojalovat
     <li></li>
 
   </ul>
+  <html>
+
+<head>
+  <style>
+  </style>
+</head>
+
+<body>
+  <script src="https://yazeledka.firebaseio.com/True work"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "https://yazeledka.firebaseio.com/True work/ID",
+      authDomain: "https://yazeledka.firebaseio.com/True work",
+      databaseURL: "https://yazeledka.firebaseio.com/",
+      projectId: "yazeledka",
+      storageBucket: "yazeledka.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script>
+    function er1() {
+      firebase.database().ref("yazeledka/" + document.getElementById("id_value").value).set(document.getElementById("id_value").value);
+      firebase.database().ref("yazeledka/" + document.getElementById("id_value").value + "/name").set(document.getElementById("name_value").value);
+      firebase.database().ref("yazeledka/" + document.getElementById("id_value").value + "/secondname").set(document.getElementById("secondname_value").value);
+      firebase.database().ref("yazeledka/" + document.getElementById("id_value").value + "/lastname").set(document.getElementById("lastname_value").value);
+      firebase.database().ref("yazeledka/" + document.getElementById("id_value").value + "/url").set(document.getElementById("url_value").value);
+    }
+    function er2() {
+      var b = document.getElementById("id_show").value
+      var a = firebase.database().ref('/guys');
+      a.on('value', function(snapshot) {
+        var snap = snapshot.val();
+        var g = snap[b];
+      });
+    }
+  </script>
+
+  ID
+  <input type="text" class="form-control" id="id_value" placeholder="" value="676767" />
+  <br> name
+  <input type="text" class="form-control" id="name_value" placeholder="" value="Dero" />
+  <br> secondname
+  <input type="text" class="form-control" id="secondname_value" placeholder="" value="Goi" />
+  <br> img
+  <input type="text" class="form-control" id="url_value" placeholder="https://i.skyrock.net/6179/83386179/pics/3084773541_1_3_Fcg5RlZ1.png"value="https://i.skyrock.net/6179/83386179/pics/3084773541_1_3_Fcg5RlZ1.png"/>
+  <br>
+  <br>
+  <a href="#on" class="button15" onclick="er1()">Добавить </a>
+  <br>
+  <a href="#on" class="button15" onclick="er2()">От этого должна появиться картинка</a>
+  <br>
+</body>
+</html>
 
 </head>
 <body>
