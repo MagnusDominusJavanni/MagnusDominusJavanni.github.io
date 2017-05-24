@@ -12,8 +12,8 @@
   <script>
     // Initialize Firebase
     var config = {
-      apiKey: "AIzaSyBS43atOOyf5ohw64WzBMFc4OkzE12byUE",
-      authDomain: "guys-22897.firebaseapp.com",
+      apiKey: "https://yazeledka.firebaseio.com/True work/ID",
+      authDomain: "https://yazeledka.firebaseio.com/True work",
       databaseURL: "https://yazeledka.firebaseio.com/",
       projectId: "yazeledka",
       storageBucket: "yazeledka.appspot.com",
@@ -27,7 +27,6 @@
       firebase.database().ref("yazeledka/" + document.getElementById("id_value").value + "/name").set(document.getElementById("name_value").value);
       firebase.database().ref("yazeledka/" + document.getElementById("id_value").value + "/secondname").set(document.getElementById("secondname_value").value);
       firebase.database().ref("yazeledka/" + document.getElementById("id_value").value + "/lastname").set(document.getElementById("lastname_value").value);
-      firebase.database().ref("yazeledka/" + document.getElementById("id_value").value + "/footsize").set(document.getElementById("footsize_value").value);
       firebase.database().ref("yazeledka/" + document.getElementById("id_value").value + "/url").set(document.getElementById("url_value").value);
     }
 
